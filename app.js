@@ -9,7 +9,8 @@ app.use(express.json());
 app.use(route)
 
 
-//Homepage routing
+//Homepage routing\
+
 app.get("/",(req,res) => {
     res.status(200).send('my name is prachi');
 })
