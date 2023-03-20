@@ -1,16 +1,7 @@
 const route = require("express").Router()
-const Middleware = require('../Middleware/mld')
 const controller = require("../Controller/clr")
 
 
+route.post("/demo",controller.demo);
 
-route.get("/register",controller.register);
-
-route.get("/product/:id",controller.product);
-
-route.get("/verify",Middleware.queryValidation,controller.verify);
-
-
-module.exports = route
-
-
+module.exports = route;

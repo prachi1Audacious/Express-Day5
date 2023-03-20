@@ -1,15 +1,15 @@
 const express = require("express");
 const app = express();
-const port = 5555;
+const port = 8080;
 const route = require("./Router/route")
 
 
 //middleware
 app.use(express.json());
-app.use(route)
+app.use(route);
 
 
-//Homepage routing\
+//Homepage routing
 
 app.get("/",(req,res) => {
     res.status(200).send('my name is prachi');
