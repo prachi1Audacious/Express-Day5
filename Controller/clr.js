@@ -10,13 +10,17 @@ const demo = (req,res)=>{
  
             }
             
+            
+            const user = db.find((user) => user.email ===arr.email);
+            if(user){  
+              
+              return res.status(200).send({ message: "email is already exist"  })
+
+            }
             db.push(arr);
             console.log(db);
 
-            const user = db.find((user) => user.email === email);
-            if(user){}
-             
-            return res.status(200).send({ message: "email is already exist"  })
+            return res.status(200).send({ message: "user created!"  })
 
         }catch (error)
          {

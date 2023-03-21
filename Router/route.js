@@ -1,9 +1,9 @@
 const route = require("express").Router()
-//const controller = require("../Controller/clr")
-const controller = require("../Controller/cntrl")
+const controller = require("../Controller/clr")
 
 
-//route.post("/demo",controller.demo);
-route.post("/users",controller.users);
+
+route.post("/demo",controller.demo);
+
 
 module.exports = route;
